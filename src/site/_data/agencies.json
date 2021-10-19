@@ -1,0 +1,52 @@
+{
+	"items": [
+		{
+			"name": "Dude",
+			"slug": "dude",
+			"url": "https://www.dude.fi/",
+			"restPosts": "https://www.dude.fi/wp-json/wp/v2/posts",
+			"repoUrl": "https://github.com/digitoimistodude",
+			"repoSlug": "https://api.github.com/orgs/digitoimistodude/repos"
+		},
+		{
+			"name": "MEOM",
+			"slug": "meom",
+			"url": "https://meom.fi/",
+			"restPosts": "https://meom.fi/wp-json/wp/v2/web_blog",
+			"repoUrl": "https://github.com/MEOM/",
+			"repoSlug": "https://api.github.com/orgs/meom/repos"
+		},
+		{
+			"name": "Valu Digital",
+			"slug": "valu-digital",
+			"url": "https://www.valu.fi/",
+			"restPosts": "https://www.valu.fi/wp-json/wp/v2/article",
+			"repoUrl": "https://github.com/valu-digital",
+			"repoSlug": "https://api.github.com/orgs/valu-digital/repos"
+		},
+		{
+			"name": "Pixels",
+			"slug": "pixels",
+			"url": "https://pixels.fi/fi/",
+			"restPosts": "https://pixels.fi/wp-json/wp/v2/posts",
+			"repoUrl": "https://github.com/pixelshelsinki",
+			"repoSlug": "https://api.github.com/orgs/pixelshelsinki/repos"
+		},
+		{
+			"name": "Sivututka",
+			"slug": "sivututka",
+			"url": "https://sivututka.fi/",
+			"restPosts": "https://sivututka.fi/wp-json/wp/v2/posts",
+			"repoUrl": "https://github.com/sivututka",
+			"repoSlug": "https://api.github.com/orgs/sivututka/repos"
+		},
+		{
+			"name": "Morgan Digital",
+			"slug": "morgan-digital",
+			"url": "https://www.morgan.fi/",
+			"restPosts": "https://morgan.fi/wp-json/wp/v2/posts",
+			"repoUrl": "",
+			"repoSlug": ""
+		}
+	]
+}

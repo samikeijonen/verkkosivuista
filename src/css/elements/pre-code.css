@@ -1,0 +1,13 @@
+pre {
+	background-color: var(--color-grey-100);
+	font-family: var(--font-family-mono);
+	overflow: auto;
+	padding: var(--spacing-4x);
+}
+
+code,
+kbd,
+tt,
+var {
+	font-family: var(--font-family-mono);
+}

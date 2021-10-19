@@ -1,0 +1,15 @@
+{%- for post in allArticles -%}
+	<article class="entry entry--archive">
+		<header class="entry__header">
+			<h2 class="entry__title">
+				<a class="decoration-none h-decoration-underline color-dark" href="/digitoimisto/{{ post.slug }}">
+					{% if post.name %}{{ post.name }}{% else %}{{ post.slug }}{% endif %}
+				</a>
+			</h2>
+		</header>
+
+		<div class="entry__summary mt-2">
+			<p>{{ post.url | safe }}</p>
+		</div>
+	</article>
+{%- endfor -%}

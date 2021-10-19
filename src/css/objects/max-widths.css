@@ -1,0 +1,9 @@
+.entry__content > *,
+.wp-block-group__inner-container > *,
+.entry__header,
+.entry__summary,
+.entry__footer,
+.comments-template {
+	@mixin center;
+	max-width: var(--max-width-md);
+}

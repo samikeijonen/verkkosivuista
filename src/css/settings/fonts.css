@@ -1,0 +1,157 @@
+/* stylelint-disable font-family-name-quotes */
+/* stylelint-disable string-quotes */
+/* playfair-display-regular - latin */
+@font-face {
+	font-display: swap;
+	font-family: 'Playfair Display';
+	font-style: normal;
+	font-weight: 400;
+	src:
+		local('Playfair Display Regular'),
+		local('PlayfairDisplay-Regular'),
+		url('../fonts/playfair-display-v14-latin-regular.woff2') format('woff2'),
+		url('../fonts/playfair-display-v14-latin-regular.woff') format('woff');
+}
+
+/* playfair-display-italic - latin */
+@font-face {
+	font-display: swap;
+	font-family: 'Playfair Display';
+	font-style: italic;
+	font-weight: 400;
+	src:
+		local('Playfair Display Italic'),
+		local('PlayfairDisplay-Italic'),
+		url('../fonts/playfair-display-v14-latin-italic.woff2') format('woff2'),
+		url('../fonts/playfair-display-v14-latin-italic.woff') format('woff');
+}
+
+/* playfair-display-700 - latin */
+@font-face {
+	font-display: swap;
+	font-family: 'Playfair Display';
+	font-style: normal;
+	font-weight: 700;
+	src:
+		local('Playfair Display Bold'),
+		local('PlayfairDisplay-Bold'),
+		url('../fonts/playfair-display-v14-latin-700.woff2') format('woff2'),
+		url('../fonts/playfair-display-v14-latin-700.woff') format('woff');
+}
+
+/* playfair-display-700italic - latin */
+@font-face {
+	font-display: swap;
+	font-family: 'Playfair Display';
+	font-style: italic;
+	font-weight: 700;
+	src:
+		local('Playfair Display Bold Italic'),
+		local('PlayfairDisplay-BoldItalic'),
+		url('../fonts/playfair-display-v14-latin-700italic.woff2') format('woff2'),
+		url('../fonts/playfair-display-v14-latin-700italic.woff') format('woff');
+}
+
+/* playfair-display-900 - latin */
+@font-face {
+	font-display: swap;
+	font-family: 'Playfair Display';
+	font-style: normal;
+	font-weight: 900;
+	src:
+		local('Playfair Display Black'),
+		local('PlayfairDisplay-Black'),
+		url('../fonts/playfair-display-v14-latin-900.woff2') format('woff2'),
+		url('../fonts/playfair-display-v14-latin-900.woff') format('woff');
+}
+
+/* playfair-display-900italic - latin */
+@font-face {
+	font-display: swap;
+	font-family: 'Playfair Display';
+	font-style: italic;
+	font-weight: 900;
+	src:
+		local('Playfair Display Black Italic'),
+		local('PlayfairDisplay-BlackItalic'),
+		url('../fonts/playfair-display-v14-latin-900italic.woff2') format('woff2'),
+		url('../fonts/playfair-display-v14-latin-900italic.woff') format('woff');
+}
+
+/* roboto-regular - latin */
+@font-face {
+	font-display: swap;
+	font-family: 'Roboto';
+	font-style: normal;
+	font-weight: 400;
+	src:
+		local('Roboto'),
+		local('Roboto-Regular'),
+		url('../fonts/roboto-v18-latin-regular.woff2') format('woff2'),
+		url('../fonts/roboto-v18-latin-regular.woff') format('woff');
+}
+
+/* roboto-italic - latin */
+@font-face {
+	font-display: swap;
+	font-family: 'Roboto';
+	font-style: italic;
+	font-weight: 400;
+	src:
+		local('Roboto Italic'),
+		local('Roboto-Italic'),
+		url('../fonts/roboto-v18-latin-italic.woff2') format('woff2'),
+		url('../fonts/roboto-v18-latin-italic.woff') format('woff');
+}
+
+/* roboto-500 - latin */
+@font-face {
+	font-display: swap;
+	font-family: 'Roboto';
+	font-style: normal;
+	font-weight: 500;
+	src:
+		local('Roboto Medium'),
+		local('Roboto-Medium'),
+		url('../fonts/roboto-v18-latin-500.woff2') format('woff2'),
+		url('../fonts/roboto-v18-latin-500.woff') format('woff');
+}
+
+/* roboto-500italic - latin */
+@font-face {
+	font-display: swap;
+	font-family: 'Roboto';
+	font-style: italic;
+	font-weight: 500;
+	src:
+		local('Roboto Medium Italic'),
+		local('Roboto-MediumItalic'),
+		url('../fonts/roboto-v18-latin-500italic.woff2') format('woff2'),
+		url('../fonts/roboto-v18-latin-500italic.woff') format('woff');
+}
+
+/* roboto-700 - latin */
+@font-face {
+	font-display: swap;
+	font-family: 'Roboto';
+	font-style: normal;
+	font-weight: 700;
+	src:
+		local('Roboto Bold'),
+		local('Roboto-Bold'),
+		url('../fonts/roboto-v18-latin-700.woff2') format('woff2'),
+		url('../fonts/roboto-v18-latin-700.woff') format('woff');
+}
+
+/* roboto-700italic - latin */
+@font-face {
+	font-display: swap;
+	font-family: 'Roboto';
+	font-style: italic;
+	font-weight: 700;
+	src:
+		local('Roboto Bold Italic'),
+		local('Roboto-BoldItalic'),
+		url('../fonts/roboto-v18-latin-700italic.woff2') format('woff2'),
+		url('../fonts/roboto-v18-latin-700italic.woff') format('woff');
+}

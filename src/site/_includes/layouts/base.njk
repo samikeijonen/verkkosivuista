@@ -1,0 +1,21 @@
+{% include "components/header.njk" %}
+
+	<article class="entry">
+		<header class="entry__header has-text-align-center mx-auto max-w-lg">
+			{% block pageTitle %}
+			{% endblock pageTitle %}
+
+			{% block byline %}
+			{% endblock byline %}
+		</header>
+
+		<div class="entry__content flow-spacing mt-6">
+			{% block content %}
+			{% endblock %}
+		</div>
+
+		{% block contentFooter %}
+		{% endblock %}
+	</article>
+
+{% include "components/footer.njk" %}

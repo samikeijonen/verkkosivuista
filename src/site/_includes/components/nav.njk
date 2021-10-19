@@ -1,0 +1,22 @@
+{% if nav.items %}
+  <nav class="nav nav--primary" aria-label="Päälinkit">
+    <ul class="nav__items nav__items--primary reset-list">
+      {% for item in nav.items %}
+        {% set relAttribute = '' %}
+        {% set currentAttribute = '' %}
+
+        {% if item.rel %}
+          {% set relAttribute = ' rel="' + item.rel + '"' %}
+        {% endif %}
+
+        {% if page.url == item.url %}
+          {% set currentAttribute = ' aria-current="page"' %}
+        {% endif %}
+
+        <li class="nav__item nav__item--primary">
+          <a class="nav__anchor nav__anchor--primary" href="{{ item.url }}"{{ relAttribute | safe }}{{ currentAttribute | safe }}>{{ item.text }}</a>
+        </li>
+      {% endfor %}
+    </ul>
+  </nav>
+{% endif %}

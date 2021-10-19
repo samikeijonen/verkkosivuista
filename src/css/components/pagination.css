@@ -1,0 +1,27 @@
+.pagination--comments {
+	margin-bottom: var(--spacing-4x);
+}
+
+.pagination__items {
+	@mixin reset-list;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	padding-bottom: var(--spacing-4x);
+}
+
+.pagination__item:not(:last-child) {
+	&::after {
+		content: "\002F";
+		padding: 0 var(--spacing-2x);
+	}
+}
+
+.pagination__anchor {
+	text-decoration: none;
+
+	&[aria-current="page"] {
+		color: var(--color-primary-900);
+		text-decoration: underline;
+	}
+}

@@ -1,0 +1,16 @@
+{
+	"items": [
+		{
+			"text": "Digitoimistot",
+			"url": "/digitoimistot/"
+		},
+		{
+			"text": "Blogi",
+			"url": "/blogi/"
+		},
+		{
+			"text": "Yhteystiedot",
+			"url": "/yhteystiedot/"
+		}
+	]
+}

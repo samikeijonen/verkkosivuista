@@ -1,0 +1,122 @@
+const fs = require("fs");
+const path = require("path");
+const { DateTime } = require("luxon");
+const htmlmin = require("html-minifier");
+
+const isDev = process.env.NODE_ENV === "development";
+
+module.exports = function(eleventyConfig) {
+	// Layout aliases make templates more portable.
+	eleventyConfig.addLayoutAlias("base", "layouts/base.njk");
+
+	// Adds a universal shortcode to embed bundled CSS. In Nunjack templates: {% bundledCss %}
+	eleventyConfig.addShortcode("bundledCss", function() {
+		return `<link href="/assets/main.css" rel="stylesheet" />`;
+	});
+
+	// Adds a universal shortcode to embed bundled JS. In Nunjack templates: {% bundledJs %}
+	eleventyConfig.addShortcode("bundledJs", function() {
+		return `<script src="/assets/main.js"></script>`;
+	});
+
+	// Readable date.
+	eleventyConfig.addFilter("readableDate", (dateObj) => {
+		return DateTime.fromISO(dateObj, {zone: 'utc'}).toFormat("dd.LL.yyyy");
+	});
+
+	// Valid date string.
+	// https://html.spec.whatwg.org/multipage/common-microsyntaxes.html#valid-date-string
+	eleventyConfig.addFilter('htmlDateString', (dateObj) => {
+		return DateTime.fromISO(dateObj, {zone: 'utc'}).toFormat('yyyy-LL-dd');
+	});
+
+	// Get path from URL.
+	eleventyConfig.addFilter('urlPath', (fullUrl) => {
+		const url = new URL(fullUrl);
+		return url.pathname.replace(/\/+$/, '');
+	});
+
+	// Get post author by ID.
+	eleventyConfig.addFilter('thisPostAuthor', (array, ID) => {
+		return array.filter( user => {
+			return user.id === ID;
+		});
+	});
+
+	// Get post comments by ID.
+	eleventyConfig.addFilter('thisPostComments', (array, ID) => {
+		return array.filter( item => {
+			return item.post === ID;
+		});
+	});
+
+	// Get posts by tag IDs.
+	eleventyConfig.addFilter('postsByTagId', (array, ID) => {
+		return array.filter( item => {
+			return item.tags.includes(ID);
+		});
+	});
+
+	// Get posts by category IDs.
+	eleventyConfig.addFilter('postsByCategoryId', (array, ID) => {
+		return array.filter( item => {
+			return item.categories.includes(ID);
+		});
+	});
+
+	// Get post tags by array of tag IDs in that post.
+	eleventyConfig.addFilter('thisPostTags', (allTags, postTags) => {
+		return allTags.filter( item => {
+			return postTags.includes(item.id);
+		});
+	});
+
+	// Get post categories by array of category IDs in that post.
+	eleventyConfig.addFilter('thisPostCategories', (allCategories, postCategories) => {
+		return allCategories.filter( item => {
+			return postCategories.includes(item.id);
+		});
+	});
+
+	// A debug utility.
+	eleventyConfig.addFilter("dump", obj => {
+		return util.inspect(obj);
+	});
+
+	eleventyConfig.addTransform('htmlmin', function(content, outputPath) {
+		if( outputPath.endsWith('.html') ) {
+			let minified = htmlmin.minify(content, {
+				useShortDoctype: true,
+				removeComments: true,
+				collapseWhitespace: true
+		});
+
+			return minified;
+		}
+
+		return content;
+	});
+
+	// Copy all images directly to dist.
+	eleventyConfig.addPassthroughCopy({ "src/img": "img" });
+
+	// Copy all fonts directly to dist.
+	eleventyConfig.addPassthroughCopy({ "src/fonts": "fonts" });
+
+	// Copy external dependencies to dist.
+	eleventyConfig.addPassthroughCopy({ "src/vendor": "vendor" });
+
+	// Reload the page every time the CSS/JS are changed.
+	eleventyConfig.setBrowserSyncConfig({ files: [ 'dist/assets/**/*.css', 'dist/assets/**/*.js' ] });
+
+	return {
+		dir: {
+			input: "src/site",
+			includes: "_includes", // relative to dir.input
+			output: "dist",
+		},
+		htmlTemplateEngine: "njk",
+		markdownTemplateEngine: "njk",
+		passthroughFileCopy: true,
+	};
+};

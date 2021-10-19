@@ -1,0 +1,18 @@
+{%- for post in allArticles -%}
+	<article class="entry entry--archive">
+		<header class="entry__header">
+			<h2 class="entry__title">
+				<a class="entry__title-anchor decoration-none h-decoration-underline color-dark" href="{{ prefixSlug }}{{ post.slug }}">
+					{% if post.title.rendered %}{{ post.title.rendered }}{% else %}{{ post.slug }}{% endif %}
+				</a>
+			</h2>
+
+			<p class="entry__byline fw-500 mt-2 mb-0">
+				{{ icon.calendar | safe }}
+				<time class="entry__date" datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate }}</time>
+			</p>
+		</header>
+
+		<div class="entry__summary mt-2">{{ post.excerpt.rendered | safe }}</div>
+	</article>
+{%- endfor -%}

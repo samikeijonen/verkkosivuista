@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="fi">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		{% bundledCss %}
+		<title>{{ title }} - {{ site.title }}</title>
+
+		<meta property="og:site_name" content="{{ site.title }}" />
+		<meta property="og:title" content="{{ title }} - {{ site.title }}" />
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content="{{site.url}}{{ page.url }}" />
+
+		{% if excerpt %}
+			<meta name="description" content="{{ excerpt | striptags(true) }}" />
+			<meta name="twitter:description" content="{{ excerpt | striptags(true) }}" />
+			<meta property="og:description" content="{{ excerpt | striptags(true) }}" />
+		{% endif %}
+
+		{% if socialImage %}
+			<meta property="og:image" content="{{ socialImage }}" />
+			<meta name="twitter:image" content="{{ socialImage }}" />
+		{% endif %}
+
+		{% if socialImageAlt %}
+			<meta property="og:image:alt" content="{{ socialImageAlt }}" />
+			<meta name="twitter:image:alt" content="{{ socialImageAlt }}" />
+		{% endif %}
+
+		<link rel="apple-touch-icon" sizes="180x180" href="/img/favicon/apple-touch-icon.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="/img/favicon/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="/img/favicon/favicon-16x16.png">
+		<link rel="manifest" href="/img/favicon/site.webmanifest">
+		<link rel="mask-icon" href="/img/favicon/safari-pinned-tab.svg" color="#222222">
+		<link rel="shortcut icon" href="/img/favicon/favicon.ico">
+		<meta name="msapplication-TileColor" content="#ffffff">
+		<meta name="msapplication-config" content="/img/favicon/browserconfig.xml">
+		<meta name="theme-color" content="#ffffff">
+	</head>
+	<body>
+		<div class="site mx-auto max-w-2xl">
+			<header class="site-header px-2 py-4">
+				<div class="site-header__wrapper mx-auto max-width-xl">
+					<a class="skip-link screen-reader-text" href="#main">Hyppää sisältöön</a>
+
+					{% include "components/branding.njk" %}
+					{% include "components/nav.njk" %}
+				</div>
+			</header>
+
+			<main id="main" class="site-main px-2 py-6 mx-auto max-w-xl">

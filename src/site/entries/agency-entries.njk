@@ -1,0 +1,55 @@
+---
+pagination:
+  data: agencies.items
+  size: 1
+  alias: agency
+permalink: "/digitoimisto/{{ agency.slug }}/index.html"
+---
+
+{% extends "layouts/base.njk" %}
+
+{% set title = agency.name %}
+{% set id = wpPage.id %}
+
+{% block pageTitle %}
+	<h1 class="entry__title">{{ title | safe }}</h1>
+{% endblock %}
+
+{% block content %}
+	<div class="entry__summary mt-2">
+		<p>{{ agency.url | safe }}</p>
+	</div>
+
+	{% set blogPosts = agencyPosts[agency.slug] %}
+	<h2 class="mt-8">Blogi {{ icon.wordpress | safe }}</h2>
+	{%- for post in blogPosts -%}
+		<div class="entry__blog flow-spacing mt-4">
+			<h3 class="entry__title">
+				<a class="entry__title-anchor decoration-none h-decoration-underline color-dark" href="{{ post.link }}">
+					{% if post.title.rendered %}{{ post.title.rendered | safe }}{% else %}{{ post.slug }}{% endif %}
+				</a>
+			</h3>
+
+			<p class="entry__byline fw-500 mt-2 mb-0">
+				{{ icon.calendar | safe }}
+				<time class="entry__date" datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate }}</time>
+			</p>
+		</div>
+	{%- endfor -%}
+
+	{% set repos = agencyRepos[agency.slug] %}
+	<h2 class="mt-8">
+		<a class="decoration-none h-decoration-underline color-dark" href="{{ agency.repoUrl }}">
+			Avoin lähdekoodi {{ icon.github | safe }}
+		</a>
+	</h2>
+	{%- for repo in repos -%}
+		<div class="entry__repos flow-spacing mt-4">
+			<h3 class="entry__title">
+				<a class="entry__title-anchor decoration-none h-decoration-underline color-dark" href="{{ repo.html_url }}">
+					{% if repo.description %}{{ repo.description }}{% else %}{{ repo.name }}{% endif %}
+				</a>
+			</h3>
+		</div>
+	{%- endfor -%}
+{% endblock %}
