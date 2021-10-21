@@ -1,17 +1,19 @@
 ---
 title: Digitoimistot
+archiveDescription: "Digitoimistojen aatelia laidasta laitaan."
 permalink: /digitoimistot/index.html
 layout: layouts/archive.njk
 pagination:
   data: agencies.items
-  size: 10
+  size: 100
 ---
 
 {% block content %}
 	{% set allArticles = pagination.items %}
-	{% set archiveTitle = 'Digitoimistot' %}
 
-	{% include "components/entry-agency.njk" %}
+	<div class="grid alignwide mx-auto">
+		{% include "components/entry-agency.njk" %}
+	</div>
 
 	{% if pagination.pages.length > 1 %}
 		<nav class="pagination mt-8" aria-label="Newer and older articles">

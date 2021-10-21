@@ -16,9 +16,15 @@ permalink: "/digitoimisto/{{ agency.slug }}/index.html"
 {% endblock %}
 
 {% block content %}
-	<div class="entry__summary mt-2">
-		<p>{{ agency.url | safe }}</p>
-	</div>
+	<p class="has-text-align-center is-style-ingress">
+		{{ agency.ingress }}
+	</p>
+
+	<figure class="wp-block-image alignwide">
+		{% getScreenshotHtml agency.slug, agency.url, [1400], "screenshot" %}
+	</figure>
+
+	<p><a class="wp-block-button__link" href="{{ agency.url | safe }}">{{ title | safe }} verkkosivut</p>
 
 	{% set blogPosts = agencyPosts[agency.slug] %}
 	<h2 class="mt-8">Blogi {{ icon.wordpress | safe }}</h2>
@@ -52,4 +58,14 @@ permalink: "/digitoimisto/{{ agency.slug }}/index.html"
 			</h3>
 		</div>
 	{%- endfor -%}
+
+	<h2>{{ title | safe }} sosiaalisessa mediassa</h2>
+	{% set socialLinks = agency.socialLinks %}
+	<ul class="nav__items nav__items--social reset-list">
+		{%- for name, url in socialLinks -%}
+			<li class="nav__item nav__item--social">
+				<a class="nav__anchor nav__anchor--social" href="{{ url }}">{{ icon[name] | safe }}<span class="screen-reader-text">{{ name }}</span></a>
+			</li>
+		{%- endfor -%}
+	</ul>
 {% endblock %}

@@ -1,12 +1,7 @@
 module.exports = ({ env, file }) => ({
 	plugins: {
 		'postcss-import': {},
-		'postcss-preset-env': {
-			stage: 0,
-			features: {
-				'custom-properties': true,
-			},
-		},
+		'postcss-custom-media': {},
 		'postcss-mixins': {},
 		'postcss-nested': {},
 		autoprefixer: {},

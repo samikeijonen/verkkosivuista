@@ -12,6 +12,10 @@
 	margin-top: var(--flow-space);
 }
 
+.flow-spacing--sm > * + * {
+	--flow-space: var(--spacing-2x);
+}
+
 .entry__content > :first-child,
 .wp-block-group__inner-container > :first-child,
 .wp-block-cover__inner-container > :first-child,

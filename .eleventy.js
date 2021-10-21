@@ -2,8 +2,55 @@ const fs = require("fs");
 const path = require("path");
 const { DateTime } = require("luxon");
 const htmlmin = require("html-minifier");
+const eleventyImage = require("@11ty/eleventy-img");
 
 const isDev = process.env.NODE_ENV === "development";
+
+const shortcodes = {
+	image: async function(filepath, alt, widths, classes, sizes) {
+		let options = {
+			formats: ["avif", "webp", "png"],
+			widths: widths || [null],
+			urlPath: "/img/built/",
+			outputDir: "./dist/img/built/",
+		};
+
+		let stats;
+		if(process.env.ELEVENTY_SERVERLESS) {
+			stats = eleventyImage.statsSync(filepath, options);
+		} else {
+			stats = await eleventyImage(filepath, options);
+		}
+
+		return eleventyImage.generateHTML(stats, {
+			alt,
+			loading: "lazy",
+			decoding: "async",
+			sizes: sizes || "(min-width: 32em) 40vw, 100vw",
+			class: classes || "image",
+		});
+	},
+	getScreenshotHtml: async function(siteSlug, siteUrl, widths, classes, sizes) {
+		let filepath = `./src/img/screenshots/${siteSlug}.png`;
+
+		let options = {
+			formats: ["jpeg"], // we don’t use AVIF here because it was a little too slow!
+			widths: widths || [null],
+			urlPath: "/img/built/",
+			outputDir: "./dist/img/built/",
+		};
+
+		let stats = await eleventyImage(filepath, options);
+
+		return eleventyImage.generateHTML(stats, {
+			alt: `Kuvankaappaus sivustosta ${siteUrl}`,
+			loading: "lazy",
+			decoding: "async",
+			sizes: sizes || "(min-width: 32em) 40vw, 100vw",
+			class: classes || "sites-screenshot",
+		});
+	}
+};
 
 module.exports = function(eleventyConfig) {
 	// Layout aliases make templates more portable.
@@ -18,6 +65,10 @@ module.exports = function(eleventyConfig) {
 	eleventyConfig.addShortcode("bundledJs", function() {
 		return `<script src="/assets/main.js"></script>`;
 	});
+
+	// Images and screenshots.
+	eleventyConfig.addNunjucksAsyncShortcode("image", shortcodes.image);
+	eleventyConfig.addNunjucksAsyncShortcode("getScreenshotHtml", shortcodes.getScreenshotHtml);
 
 	// Readable date.
 	eleventyConfig.addFilter("readableDate", (dateObj) => {
