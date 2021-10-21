@@ -51,6 +51,14 @@
 	@mixin reset-list;
 }
 
+.rounded-md {
+	border-radius: var(--spacing);
+}
+
+.shadow-md {
+	box-shadow: 0 4px 20px var(--color-grey-200);
+}
+
 .underline-link {
 	border-bottom: 2px solid;
 	display: inline-block;

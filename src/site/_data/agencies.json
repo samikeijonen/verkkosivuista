@@ -4,49 +4,85 @@
 			"name": "Dude",
 			"slug": "dude",
 			"url": "https://www.dude.fi/",
+			"ingress": "Suunnittelemme moderneja ja tyylikkäitä WordPress-verkkosivustoja.",
 			"restPosts": "https://www.dude.fi/wp-json/wp/v2/posts",
 			"repoUrl": "https://github.com/digitoimistodude",
-			"repoSlug": "https://api.github.com/orgs/digitoimistodude/repos"
+			"repoSlug": "https://api.github.com/orgs/digitoimistodude/repos",
+			"socialLinks": {
+				"twitter": "https://twitter.com/dudetoimisto",
+				"instagram": "https://www.instagram.com/digitoimistodude/",
+				"linkedin": "https://www.linkedin.com/company/digitoimisto-dude-oy"
+			}
 		},
 		{
 			"name": "MEOM",
 			"slug": "meom",
 			"url": "https://meom.fi/",
+			"ingress": "Autamme markkinoinnin ja viestinnän ammattilaisia pääsemään tavoitteisiinsa.",
 			"restPosts": "https://meom.fi/wp-json/wp/v2/web_blog",
 			"repoUrl": "https://github.com/MEOM/",
-			"repoSlug": "https://api.github.com/orgs/meom/repos"
+			"repoSlug": "https://api.github.com/orgs/meom/repos",
+			"socialLinks": {
+				"twitter": "https://twitter.com/",
+				"instagram": "https://instagram.com/",
+				"linkedin": "https://linkedin.com/"
+			}
 		},
 		{
 			"name": "Valu Digital",
 			"slug": "valu-digital",
 			"url": "https://www.valu.fi/",
+			"ingress": "Vaativat verkkopalvelut ja laadukkaat ylläpitopalvelut saumattomasti saman katon alta.",
 			"restPosts": "https://www.valu.fi/wp-json/wp/v2/article",
 			"repoUrl": "https://github.com/valu-digital",
-			"repoSlug": "https://api.github.com/orgs/valu-digital/repos"
+			"repoSlug": "https://api.github.com/orgs/valu-digital/repos",
+			"socialLinks": {
+				"twitter": "https://twitter.com/",
+				"instagram": "https://instagram.com/",
+				"linkedin": "https://linkedin.com/"
+			}
 		},
 		{
 			"name": "Pixels",
 			"slug": "pixels",
 			"url": "https://pixels.fi/fi/",
+			"ingress": "Autamme kasvuhakuisia yrityksiä kehittämään liiketoimintaa käyttäjälähtöisten verkkopalveluiden avulla.",
 			"restPosts": "https://pixels.fi/wp-json/wp/v2/posts",
 			"repoUrl": "https://github.com/pixelshelsinki",
-			"repoSlug": "https://api.github.com/orgs/pixelshelsinki/repos"
+			"repoSlug": "https://api.github.com/orgs/pixelshelsinki/repos",
+			"socialLinks": {
+				"twitter": "https://twitter.com/",
+				"instagram": "https://instagram.com/",
+				"linkedin": "https://linkedin.com/"
+			}
 		},
 		{
 			"name": "Sivututka",
 			"slug": "sivututka",
 			"url": "https://sivututka.fi/",
+			"ingress": "Autamme yritystäsi kasvamaan ja tekemään vaikutuksen verkossa.",
 			"restPosts": "https://sivututka.fi/wp-json/wp/v2/posts",
 			"repoUrl": "https://github.com/sivututka",
-			"repoSlug": "https://api.github.com/orgs/sivututka/repos"
+			"repoSlug": "https://api.github.com/orgs/sivututka/repos",
+			"socialLinks": {
+				"twitter": "https://twitter.com/",
+				"instagram": "https://instagram.com/",
+				"linkedin": "https://linkedin.com/"
+			}
 		},
 		{
 			"name": "Morgan Digital",
 			"slug": "morgan-digital",
 			"url": "https://www.morgan.fi/",
+			"ingress": "Saat meiltä verkkosivujen lisäksi kaikki viestinnän ja visuaalisen suunnittelun palvelut.",
 			"restPosts": "https://morgan.fi/wp-json/wp/v2/posts",
 			"repoUrl": "",
-			"repoSlug": ""
+			"repoSlug": "",
+			"socialLinks": {
+				"twitter": "https://twitter.com/",
+				"instagram": "https://instagram.com/",
+				"linkedin": "https://linkedin.com/"
+			}
 		}
 	]
 }

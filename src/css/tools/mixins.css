@@ -22,8 +22,8 @@
 }
 
 @define-mixin reset-list {
-	@mixin reset-margin-padding;
 	list-style-type: none;
+	padding: 0;
 }
 
 @define-mixin global-transition {

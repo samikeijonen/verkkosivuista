@@ -1,15 +1,21 @@
 {%- for post in allArticles -%}
-	<article class="entry entry--archive">
+	<article class="entry entry--agency shadow-md rounded-md">
 		<header class="entry__header">
-			<h2 class="entry__title">
-				<a class="decoration-none h-decoration-underline color-dark" href="/digitoimisto/{{ post.slug }}">
+			<figure class="entry__fig mb-0">
+				{% getScreenshotHtml post.slug, post.url, [1024] %}
+			</figure>
+		</header>
+
+		<div class="entry__summary mt-0 py-4 px-3 flow-spacing flow-spacing--sm">
+			<h2 class="entry__title h3">
+				<a class="entry__title-anchor entry__title-anchor--agency decoration-none h-decoration-underline color-dark" href="/digitoimisto/{{ post.slug }}">
 					{% if post.name %}{{ post.name }}{% else %}{{ post.slug }}{% endif %}
 				</a>
 			</h2>
-		</header>
 
-		<div class="entry__summary mt-2">
-			<p>{{ post.url | safe }}</p>
+			<p class="has-grey-500-color">
+				{{ post.ingress }}
+			</p>
 		</div>
 	</article>
 {%- endfor -%}

@@ -1,3 +1,7 @@
+.entry {
+	position: relative;
+}
+
 .entry--archive {
 	border-bottom: 2px solid var(--color-grey-100);
 	margin-bottom: var(--spacing-8x);
@@ -5,6 +9,15 @@
 	margin-right: auto;
 	max-width: var(--max-width-md);
 	padding-bottom: var(--spacing-8x);
+}
+
+.entry--agency {
+	transition: transform var(--transition-duration-md);
+
+	&:focus-within,
+	&:hover {
+		transform: translateY(-2px);
+	}
 }
 
 .entry__byline,
@@ -55,7 +68,7 @@
 }
 
 .entry__title-anchor {
-	color: var(--color-grey-900);
+	color: var(--color-primary-900);
 
 	&:hover,
 	&:focus,
@@ -63,3 +76,14 @@
 		color: var(--color-primary);
 	}
 }
+
+.entry__title-anchor--agency::after {
+	bottom: 0;
+	content: "";
+	left: 0;
+	position: absolute;
+	right: 0;
+	top: 0;
+	z-index: 10;
+}
+
