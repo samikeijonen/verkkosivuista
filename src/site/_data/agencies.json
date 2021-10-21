@@ -1,13 +1,31 @@
 {
 	"items": [
 		{
+			"name": "Valu Digital",
+			"slug": "valu-digital",
+			"url": "https://www.valu.fi/",
+			"ingress": "Vaativat verkkopalvelut ja laadukkaat ylläpitopalvelut saumattomasti saman katon alta.",
+			"postsUrl": "https://www.valu.fi/uutiset-ja-artikkelit/",
+			"postsRestUrl": "https://www.valu.fi/wp-json/wp/v2/article",
+			"repoUrl": "https://github.com/valu-digital",
+			"repoApi": "https://api.github.com/orgs/valu-digital/repos",
+			"socialLinks": {
+				"twitter": "https://twitter.com/valudigital",
+				"instagram": "https://www.linkedin.com/company/valu-digital-oy/",
+				"linkedin": ""
+			}
+		},
+		{
 			"name": "Dude",
 			"slug": "dude",
 			"url": "https://www.dude.fi/",
 			"ingress": "Suunnittelemme moderneja ja tyylikkäitä WordPress-verkkosivustoja.",
-			"restPosts": "https://www.dude.fi/wp-json/wp/v2/posts",
+			"typicalBudjet" : "3",
+			"featured": true,
+			"postsUrl": "https://www.dude.fi/blogi/",
+			"postsRestUrl": "https://www.dude.fi/wp-json/wp/v2/posts",
 			"repoUrl": "https://github.com/digitoimistodude",
-			"repoSlug": "https://api.github.com/orgs/digitoimistodude/repos",
+			"repoApi": "https://api.github.com/orgs/digitoimistodude/repos",
 			"socialLinks": {
 				"twitter": "https://twitter.com/dudetoimisto",
 				"instagram": "https://www.instagram.com/digitoimistodude/",
@@ -19,27 +37,16 @@
 			"slug": "meom",
 			"url": "https://meom.fi/",
 			"ingress": "Autamme markkinoinnin ja viestinnän ammattilaisia pääsemään tavoitteisiinsa.",
-			"restPosts": "https://meom.fi/wp-json/wp/v2/web_blog",
+			"typicalBudjet" : "3",
+			"featured": true,
+			"postsUrl": "https://www.meom.fi/verkkosivut/blogi/",
+			"postsRestUrl": "https://meom.fi/wp-json/wp/v2/web_blog",
 			"repoUrl": "https://github.com/MEOM/",
-			"repoSlug": "https://api.github.com/orgs/meom/repos",
+			"repoApi": "https://api.github.com/orgs/meom/repos",
 			"socialLinks": {
-				"twitter": "https://twitter.com/",
-				"instagram": "https://instagram.com/",
-				"linkedin": "https://linkedin.com/"
-			}
-		},
-		{
-			"name": "Valu Digital",
-			"slug": "valu-digital",
-			"url": "https://www.valu.fi/",
-			"ingress": "Vaativat verkkopalvelut ja laadukkaat ylläpitopalvelut saumattomasti saman katon alta.",
-			"restPosts": "https://www.valu.fi/wp-json/wp/v2/article",
-			"repoUrl": "https://github.com/valu-digital",
-			"repoSlug": "https://api.github.com/orgs/valu-digital/repos",
-			"socialLinks": {
-				"twitter": "https://twitter.com/",
-				"instagram": "https://instagram.com/",
-				"linkedin": "https://linkedin.com/"
+				"twitter": "https://twitter.com/MEOMfi",
+				"instagram": "https://www.instagram.com/meomfi/",
+				"linkedin": "https://www.linkedin.com/company/meom"
 			}
 		},
 		{
@@ -47,13 +54,14 @@
 			"slug": "pixels",
 			"url": "https://pixels.fi/fi/",
 			"ingress": "Autamme kasvuhakuisia yrityksiä kehittämään liiketoimintaa käyttäjälähtöisten verkkopalveluiden avulla.",
-			"restPosts": "https://pixels.fi/wp-json/wp/v2/posts",
+			"postsUrl": "https://pixels.fi/fi/blogi/",
+			"postsRestUrl": "https://pixels.fi/wp-json/wp/v2/posts",
 			"repoUrl": "https://github.com/pixelshelsinki",
-			"repoSlug": "https://api.github.com/orgs/pixelshelsinki/repos",
+			"repoApi": "https://api.github.com/orgs/pixelshelsinki/repos",
 			"socialLinks": {
-				"twitter": "https://twitter.com/",
-				"instagram": "https://instagram.com/",
-				"linkedin": "https://linkedin.com/"
+				"twitter": "https://twitter.com/pixelshelsinki",
+				"instagram": "https://www.instagram.com/pixelshelsinki/",
+				"linkedin": "https://www.linkedin.com/company/pixels-helsinki"
 			}
 		},
 		{
@@ -61,13 +69,14 @@
 			"slug": "sivututka",
 			"url": "https://sivututka.fi/",
 			"ingress": "Autamme yritystäsi kasvamaan ja tekemään vaikutuksen verkossa.",
-			"restPosts": "https://sivututka.fi/wp-json/wp/v2/posts",
+			"postsUrl": "https://sivututka.fi/blogi/",
+			"postsRestUrl": "https://sivututka.fi/wp-json/wp/v2/posts",
 			"repoUrl": "https://github.com/sivututka",
-			"repoSlug": "https://api.github.com/orgs/sivututka/repos",
+			"repoApi": "https://api.github.com/orgs/sivututka/repos",
 			"socialLinks": {
-				"twitter": "https://twitter.com/",
-				"instagram": "https://instagram.com/",
-				"linkedin": "https://linkedin.com/"
+				"twitter": "https://twitter.com/sivututka",
+				"instagram": "https://www.instagram.com/sivututkaoy/",
+				"linkedin": "https://www.linkedin.com/company/sivututka/"
 			}
 		},
 		{
@@ -75,13 +84,60 @@
 			"slug": "morgan-digital",
 			"url": "https://www.morgan.fi/",
 			"ingress": "Saat meiltä verkkosivujen lisäksi kaikki viestinnän ja visuaalisen suunnittelun palvelut.",
-			"restPosts": "https://morgan.fi/wp-json/wp/v2/posts",
+			"postsUrl": "https://www.morgan.fi/category/ajankohtaista/",
+			"postsRestUrl": "https://morgan.fi/wp-json/wp/v2/posts",
 			"repoUrl": "",
-			"repoSlug": "",
+			"repoApi": "",
 			"socialLinks": {
-				"twitter": "https://twitter.com/",
-				"instagram": "https://instagram.com/",
-				"linkedin": "https://linkedin.com/"
+				"twitter": "https://twitter.com/morgandigitalfi",
+				"instagram": "https://www.instagram.com/morgandigital/",
+				"linkedin": ""
+			}
+		},
+		{
+			"name": "Geniem",
+			"slug": "geniem",
+			"url": "https://www.geniem.fi/",
+			"ingress": "Intohimonamme on luoda digitaalisia ratkaisuja, joiden avulla erotut kilpailijoistasi, sitoutat asiakkaasi ja teet jatkuvasti parempaa tulosta.",
+			"postsUrl": "https://www.geniem.fi/blogi/",
+			"postsRestUrl": "",
+			"repoUrl": "https://github.com/devgeniem",
+			"repoApi": "https://api.github.com/orgs/devgeniem/repos",
+			"socialLinks": {
+				"twitter": "https://twitter.com/geniemfi",
+				"instagram": "https://www.instagram.com/geniemdev/",
+				"linkedin": "https://www.linkedin.com/company/geniem-ltd-"
+			}
+		},
+		{
+			"name": "Evermade",
+			"slug": "evermade",
+			"url": "https://www.evermade.fi/fi/",
+			"ingress": "Olemme kokonaisvaltainen digikumppani, joka auttaa sinua saavuttamaan liiketoiminnalliset tavoitteesi verkossa.",
+			"featured": true,
+			"postsUrl": "https://www.evermade.fi/fi/artikkeli/",
+			"postsRestUrl": "",
+			"repoUrl": "https://github.com/evermade",
+			"repoApi": "https://api.github.com/orgs/evermade/repos",
+			"socialLinks": {
+				"twitter": "https://twitter.com/evermadefi",
+				"instagram": "https://www.instagram.com/evermadehelsinki/",
+				"linkedin": "https://www.linkedin.com/company/evermade-oy"
+			}
+		},
+		{
+			"name": "Redland",
+			"slug": "redland",
+			"url": "https://www.redland.fi/",
+			"ingress": "Olemme mainostoimisto, viestintätoimisto ja digitoimisto samassa paketissa.",
+			"postsUrl": "https://www.redland.fi/opi-uutta-alalta",
+			"postsRestUrl": "https://redland.fi/wp-json/wp/v2/posts",
+			"repoUrl": "",
+			"repoApi": "",
+			"socialLinks": {
+				"twitter": "https://twitter.com/redland_fi",
+				"instagram": "https://www.instagram.com/redland_fi",
+				"linkedin": "https://fi.linkedin.com/company/redland-oy"
 			}
 		}
 	]

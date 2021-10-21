@@ -1,20 +1,20 @@
-{%- for post in allArticles -%}
+{%- for agency in selectedAgencies -%}
 	<article class="entry entry--agency shadow-md rounded-md">
 		<header class="entry__header">
 			<figure class="entry__fig mb-0">
-				{% getScreenshotHtml post.slug, post.url, [1024] %}
+				{% getScreenshotHtml agency.slug, agency.url, [1024] %}
 			</figure>
 		</header>
 
 		<div class="entry__summary mt-0 py-4 px-3 flow-spacing flow-spacing--sm">
 			<h2 class="entry__title h3">
-				<a class="entry__title-anchor entry__title-anchor--agency decoration-none h-decoration-underline color-dark" href="/digitoimisto/{{ post.slug }}">
-					{% if post.name %}{{ post.name }}{% else %}{{ post.slug }}{% endif %}
+				<a class="entry__title-anchor entry__title-anchor--agency decoration-none h-decoration-underline color-dark" href="/digitoimisto/{{ agency.slug }}">
+					{% if agency.name %}{{ agency.name }}{% else %}{{ agency.slug }}{% endif %}
 				</a>
 			</h2>
 
 			<p class="has-grey-500-color">
-				{{ post.ingress }}
+				{{ agency.ingress }}
 			</p>
 		</div>
 	</article>

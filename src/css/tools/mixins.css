@@ -35,9 +35,11 @@
 	border: none;
 	border-radius: 0;
 	color: var(--color-white);
+	font-size: var(--font-size-md);
 	font-weight: 500;
 	letter-spacing: var(--letter-spacing-md);
-	padding: calc(var(--spacing) * 1.5) calc(var(--spacing-2x) * 1.25);
+	padding: calc(var(--spacing) * 1.5) var(--spacing-4x);
+	text-transform: uppercase;
 }
 
 @define-mixin button-block-hover {
