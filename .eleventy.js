@@ -1,10 +1,20 @@
-const fs = require("fs");
+const { promises: Fs } = require('fs')
 const path = require("path");
 const { DateTime } = require("luxon");
 const htmlmin = require("html-minifier");
 const eleventyImage = require("@11ty/eleventy-img");
 
 const isDev = process.env.NODE_ENV === "development";
+
+// Check if file exists.
+async function exists(path) {
+	try {
+		await Fs.access(path)
+		return true
+	} catch {
+		return false
+	}
+}
 
 const shortcodes = {
 	image: async function(filepath, alt, widths, classes, sizes) {
@@ -31,7 +41,16 @@ const shortcodes = {
 		});
 	},
 	getScreenshotHtml: async function(siteSlug, siteUrl, widths, classes, sizes) {
-		let filepath = `./src/img/screenshots/${siteSlug}.png`;
+		// Fallback.
+		let filepath = './src/img/screenshots/fallback.png';
+
+		// Correct image.
+		let correctImg = `./src/img/screenshots/${siteSlug}.png`;
+
+		// Check if we have correct image.
+		if (await exists(correctImg)) {
+			filepath = correctImg;
+		}
 
 		let options = {
 			formats: ["jpeg"], // we don’t use AVIF here because it was a little too slow!
@@ -79,6 +98,40 @@ module.exports = function(eleventyConfig) {
 	// https://html.spec.whatwg.org/multipage/common-microsyntaxes.html#valid-date-string
 	eleventyConfig.addFilter('htmlDateString', (dateObj) => {
 		return DateTime.fromISO(dateObj, {zone: 'utc'}).toFormat('yyyy-LL-dd');
+	});
+
+	// Get featured agencies. Or not featured.
+	eleventyConfig.addFilter('featuredAgencies', (array, not) => {
+		return array.filter( agency => {
+			return not ? agency.featured : !agency.featured;
+		});
+	});
+
+	// Randomize array.
+	function randomizeArray(array) {
+		let a = array.slice(0);
+		for (let i = a.length - 1; i > 0; i--) {
+				const j = Math.floor(Math.random() * (i + 1));
+				[a[i], a[j]] = [a[j], a[i]];
+		}
+
+		return a;
+	}
+
+	// Shuffle array.
+	// Thanks to https://stackoverflow.com/questions/6274339/how-can-i-shuffle-an-array
+	eleventyConfig.addFilter("shuffle", array => {
+		if( Array.isArray(array) ) {
+			return randomizeArray(array);
+		}
+
+		let keys = randomizeArray(Object.keys(array));
+		let a = {};
+		for(let key of keys) {
+			a[key] = array[key];
+		}
+
+		return a;
 	});
 
 	// Get path from URL.

@@ -3,15 +3,14 @@ title: Digitoimistot
 archiveDescription: "Digitoimistojen aatelia laidasta laitaan."
 permalink: /digitoimistot/index.html
 layout: layouts/archive.njk
-pagination:
-  data: agencies.items
-  size: 100
 ---
 
 {% block content %}
-	{% set allArticles = pagination.items %}
-
 	<div class="grid alignwide mx-auto">
+		{% set selectedAgencies = agencies.items | featuredAgencies(true) | shuffle  %}
+		{% include "components/entry-agency.njk" %}
+
+		{% set selectedAgencies = agencies.items | featuredAgencies(false) | shuffle %}
 		{% include "components/entry-agency.njk" %}
 	</div>
 

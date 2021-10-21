@@ -13,6 +13,10 @@
 	display: inline-block;
 	text-decoration: none;
 
+	svg {
+		transition: transform var(--transition-duration-md);
+	}
+
 	&:visited {
 		color: var(--color-white);
 	}
@@ -22,15 +26,24 @@
 	&:active {
 		@mixin button-block-hover;
 	}
+
+	&:hover svg,
+	&:focus svg,
+	&:active svg {
+		transform: translateX(0.25rem);
+	}
 }
 
 /* Style variations. */
-.is-style-rounded .wp-block-button__link {
+.is-style-rounded .wp-block-button__link,
+.is-style-rounded.wp-block-button__link {
 	border-radius: calc(var(--spacing) * 12);
 }
 
 .is-style-outline .wp-block-button__link,
-.is-style-outline-rounded .wp-block-button__link {
+.is-style-outline.wp-block-button__link,
+.is-style-outline-rounded .wp-block-button__link,
+.is-style-outline-rounded.wp-block-button__link {
 	@mixin button-block-outline;
 
 	&:hover,
@@ -40,11 +53,13 @@
 	}
 }
 
-.is-style-outline-rounded .wp-block-button__link {
+.is-style-outline-rounded .wp-block-button__link,
+.is-style-outline-rounded.wp-block-button__link, {
 	border-radius: calc(var(--spacing) * 12);
 }
 
-.is-style-underlined .wp-block-button__link {
+.is-style-underlined .wp-block-button__link,
+.is-style-underlined.wp-block-button__link {
 	@mixin button-block-underlined;
 
 	&:hover,
