@@ -31,9 +31,9 @@
 }
 
 @define-mixin button-block {
-	background-color: var(--color-primary);
+	background-color: var(--color-primary-700);
 	border: none;
-	border-radius: 0;
+	border-radius: 0.25rem;
 	color: var(--color-white);
 	font-size: var(--font-size-md);
 	font-weight: 500;
@@ -43,30 +43,30 @@
 }
 
 @define-mixin button-block-hover {
-	background-color: var(--color-primary-900);
+	background-color: var(--color-grey-900);
 	color: var(--color-white);
-	outline-offset: -2px;
 }
 
 @define-mixin button-block-outline {
 	background-color: transparent;
 	border: 2px solid;
-	border-radius: 0;
 	color: var(--color-primary-900);
 }
 
 @define-mixin button-block-outline-hover {
-	background-color: var(--color-primary-900);
-	border-color: var(--color-primary-900);
+	background-color: var(--color-primary-700);
+	border-color: var(--color-primary-700);
 	color: var(--color-white);
 }
 
 @define-mixin button-block-underlined {
 	background-color: transparent;
-	border-bottom: 2px solid;
 	border-radius: 0;
-	color: var(--color-primary-700);
+	color: var(--color-grey-900);
 	padding: 0;
+	text-decoration: underline;
+	text-decoration-color: var(--color-secondary-500);
+	text-decoration-thickness: 2px;
 }
 
 @define-mixin button-block-underlined-hover {
@@ -79,7 +79,7 @@
 }
 
 @define-mixin subheading {
-	color: var(--color-grey-500);
+	color: var(--color-grey-600);
 	font-size: var(--font-size-xl);
 	font-style: normal;
 	text-align: center;

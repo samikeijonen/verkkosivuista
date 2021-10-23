@@ -1,5 +1,5 @@
 .terms-wrapper {
-	color: var(--color-grey-500);
+	color: var(--color-grey-600);
 	display: block;
 
 	& + .terms-wrapper {
@@ -11,7 +11,7 @@
 	}
 
 	& a {
-		color: var(--color-grey-500);
+		color: var(--color-grey-600);
 		font-size: var(--font-size-md);
 		font-weight: 700;
 		text-decoration: none;

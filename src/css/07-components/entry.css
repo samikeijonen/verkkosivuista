@@ -22,7 +22,7 @@
 
 .entry__byline,
 .entry__terms-title {
-	color: var(--color-grey-500);
+	color: var(--color-grey-600);
 	font-size: var(--font-size-sm);
 	letter-spacing: var(--letter-spacing-sm);
 	text-transform: uppercase;
@@ -50,7 +50,7 @@
 }
 
 .entry__terms-anchor {
-	background-color: var(--color-grey-200);
+	background-color: var(--color-grey-100);
 	border-radius: 2px;
 	color: var(--color-grey-900);
 	padding: var(--spacing-sm) var(--spacing-2x);
@@ -63,17 +63,17 @@
 	}
 
 	&:focus {
-		outline-offset: -2px;
+		outline-color: var(--color-grey-700);
 	}
 }
 
 .entry__title-anchor {
-	color: var(--color-primary-900);
+	color: var(--color-grey-900);
 
 	&:hover,
 	&:focus,
 	&:active {
-		color: var(--color-primary);
+		color: var(--color-primary-700);
 	}
 }
 

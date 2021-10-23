@@ -23,7 +23,7 @@
 }
 
 .has-dark-color {
-	color: var(--color-primary-900);
+	color: var(--color-grey-900);
 }
 
 .has-dark-background-color {

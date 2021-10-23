@@ -50,7 +50,7 @@ permalink: "/digitoimisto/{{ agency.slug }}/index.html"
 	{%- endfor -%}
 
 	{% if agency.postsUrl %}
-		<p><a class="wp-block-button__link is-style-outline" href="{{ agency.postsUrl }}">{{ title | safe }} löpinät {{ icon.arrowRight | safe  }}</a></p>
+		<p><a class="wp-block-button__link is-style-underlined" href="{{ agency.postsUrl }}">{{ title | safe }} löpinät {{ icon.arrowRight | safe  }}</a></p>
 	{% else %}
 		<p>Hiljaista porukkaa.</p>
 	{% endif %}
@@ -73,7 +73,7 @@ permalink: "/digitoimisto/{{ agency.slug }}/index.html"
 	{%- endfor -%}
 
 	{% if agency.repoUrl %}
-		<p><a class="wp-block-button__link is-style-outline" href="{{ agency.repoUrl }}">{{ title | safe }} koodit {{ icon.arrowRight | safe  }}</a></p>
+		<p><a class="wp-block-button__link is-style-underlined" href="{{ agency.repoUrl }}">{{ title | safe }} koodit {{ icon.arrowRight | safe  }}</a></p>
 	{% else %}
 		<p>Github-koodia ei tähän hätään löytynyt.</p>
 	{% endif %}

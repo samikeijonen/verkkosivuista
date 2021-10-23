@@ -10,8 +10,14 @@ h3.wp-block,
 h4.wp-block,
 h5.wp-block,
 h6.wp-block {
-	color: var(--color-primary-900);
+	color: var(--color-grey-900);
 	font-family: var(--font-family-serif);
+
+	svg {
+		background-color: var(--color-secondary-200);
+		border-radius: 50%;
+		padding: 0.2em;
+	}
 }
 
 h1,

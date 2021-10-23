@@ -21,7 +21,7 @@
 	text-decoration: none;
 
 	&[aria-current="page"] {
-		color: var(--color-primary-900);
+		color: var(--color-grey-900);
 		text-decoration: underline;
 	}
 }

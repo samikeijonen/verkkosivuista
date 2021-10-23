@@ -12,7 +12,7 @@
 
 .is-style-ingress,
 .is-style-ingress.wp-block-paragraph {
-	color: var(--color-grey-500);
+	color: var(--color-grey-600);
 	font-size: var(--font-size-xl);
 }
 
