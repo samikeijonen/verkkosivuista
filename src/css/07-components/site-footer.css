@@ -1,0 +1,13 @@
+.site-footer {
+	background-color: var(--color-grey-900);
+	color: var(--color-grey-100);
+}
+
+.site-footer::before {
+	border-bottom: var(--spacing-sm) solid var(--color-secondary-300);
+	content: "";
+	display: block;
+	margin: 0 auto var(--spacing-8x);
+	transform: rotate(-5deg);
+	width: calc(var(--spacing-2x) * 5);
+}

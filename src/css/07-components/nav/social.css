@@ -11,16 +11,16 @@
 }
 
 .nav__anchor--social {
-	background-color: var(--color-primary-900);
+	background-color: var(--color-grey-100);
 	border-radius: 50%;
-	color: var(--color-grey-100);
+	color: var(--color-grey-900);
 	display: block;
 	padding: var(--spacing-2x);
 
 	&:hover,
 	&:focus,
 	&:active {
-		background-color: var(--color-primary);
+		background-color: var(--color-grey-700);
 		color: var(--color-white);
 	}
 

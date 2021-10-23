@@ -26,7 +26,7 @@
 }
 
 .nav__anchor--primary {
-	color: var(--color-grey-500);
+	color: var(--color-grey-600);
 	display: block;
 	font-size: var(--font-size-sm);
 	font-weight: 500;
@@ -40,11 +40,13 @@
 	&:focus,
 	&:active,
 	&[aria-current] {
-		color: var(--color-primary-900);
+		color: var(--color-grey-900);
 	}
 
 	&[aria-current] {
 		text-decoration: underline;
+		text-decoration-color: var(--color-secondary-500);
+		text-decoration-thickness: 2px;
 	}
 }
 

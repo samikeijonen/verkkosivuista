@@ -27,6 +27,10 @@
 		@mixin button-block-hover;
 	}
 
+	&:focus {
+		outline-color: var(--color-grey-900);
+	}
+
 	&:hover svg,
 	&:focus svg,
 	&:active svg {
