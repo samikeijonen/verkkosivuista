@@ -13,5 +13,6 @@ input[type="submit"] {
 
 	&:focus {
 		@mixin global-focus-styles;
+		outline-color: var(--color-grey-900);
 	}
 }

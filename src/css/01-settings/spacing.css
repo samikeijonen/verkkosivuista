@@ -17,4 +17,14 @@
 	--spacing-14x: 7rem;
 	--spacing-15x: 7.5rem;
 	--spacing-16x: 8rem;
+
+	--px-padding: var(--spacing-2x);
+
+	@media (--screen-md) {
+		--px-padding: var(--spacing-4x);
+	}
+
+	@media (--screen-lg) {
+		--px-padding: var(--spacing-8x);
+	}
 }

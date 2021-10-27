@@ -1,9 +1,6 @@
 .nav ul {
 	@mixin reset-list;
-}
-
-.nav--primary {
-	margin-top: var(--spacing-2x);
+	margin-bottom: 0;
 }
 
 .nav__items--primary {
