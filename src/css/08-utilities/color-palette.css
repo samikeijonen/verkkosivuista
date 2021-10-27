@@ -34,6 +34,10 @@
 	color: var(--color-grey-100);
 }
 
+.has-grey-050-background-color {
+	background-color: var(--color-grey-050);
+}
+
 .has-grey-100-background-color,
 .has-light-background-color {
 	background-color: var(--color-grey-100);

@@ -4,7 +4,3 @@
 	grid-gap: var(--spacing-5x);
 	grid-template-columns: repeat(auto-fill, minmax(22rem, 1fr));
 }
-
-.page-template-entry-no-header .app-main {
-	padding-top: 0;
-}

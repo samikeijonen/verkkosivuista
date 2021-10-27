@@ -1,0 +1,25 @@
+---
+title: Verkkosivujen tilaajille ja tekijöille
+layout: layouts/page.njk
+---
+
+{% block content %}
+	<p class="is-style-ingress text-center">Yrityksille vinkkejä verkkosivujen hankintaan. Ja tekijöille niiden tekemiseen.</p>
+
+	<div class="alignwide has-grey-050-background-color py-8">
+		<div class="mx-auto max-width-md flow-spacing">
+			<h2 class="h3">Noin viikon vinkit verkkosivuista - tilaa uutiskirje</h2>
+			<form
+				action="https://buttondown.email/api/emails/embed-subscribe/verkkosivuista"
+				method="post"
+				target="popupwindow"
+				onsubmit="window.open('https://buttondown.email/verkkosivuista', 'popupwindow')"
+				class="embeddable-buttondown-form"
+				>
+				<label for="bd-email">Sähköposti</label>
+				<input type="email" name="email" id="bd-email" />
+				<input class="mt-2" type="submit" value="Tilaa uutiskirje" />
+			</form>
+		</div>
+	</div>
+{% endblock %}
