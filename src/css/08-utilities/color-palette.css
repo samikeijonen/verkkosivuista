@@ -1,6 +1,5 @@
 /* Fallback for backgrounds. */
-.has-background,
-[class$="background-color"] {
+.has-background {
 	background-color: var(--color-primary-100);
 
 	& a:not(.wp-block-button__link) {
@@ -8,8 +7,7 @@
 	}
 }
 
-.has-background:not(.wp-block-button__link),
-[class$="background-color"]:not(.wp-block-button__link) {
+.has-background:not(.wp-block-button__link) {
 	padding: var(--spacing-14x) var(--spacing-2x);
 }
 
