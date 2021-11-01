@@ -9,6 +9,7 @@
 			"postsRestUrl": "https://www.valu.fi/wp-json/wp/v2/article",
 			"repoUrl": "https://github.com/valu-digital",
 			"repoApi": "https://api.github.com/orgs/valu-digital/repos",
+			"referenceUrl": "https://www.valu.fi/asiakastarinat/",
 			"socialLinks": {
 				"twitter": "https://twitter.com/valudigital",
 				"instagram": "https://www.linkedin.com/company/valu-digital-oy/",
@@ -26,6 +27,7 @@
 			"postsRestUrl": "https://www.dude.fi/wp-json/wp/v2/posts",
 			"repoUrl": "https://github.com/digitoimistodude",
 			"repoApi": "https://api.github.com/orgs/digitoimistodude/repos",
+			"referenceUrl": "https://www.dude.fi/toitamme/",
 			"socialLinks": {
 				"twitter": "https://twitter.com/dudetoimisto",
 				"instagram": "https://www.instagram.com/digitoimistodude/",
@@ -43,6 +45,7 @@
 			"postsRestUrl": "https://meom.fi/wp-json/wp/v2/web_blog",
 			"repoUrl": "https://github.com/MEOM/",
 			"repoApi": "https://api.github.com/orgs/meom/repos",
+			"referenceUrl": "https://www.meom.fi/verkkosivut/referenssit/",
 			"socialLinks": {
 				"twitter": "https://twitter.com/MEOMfi",
 				"instagram": "https://www.instagram.com/meomfi/",
@@ -58,6 +61,7 @@
 			"postsRestUrl": "https://pixels.fi/wp-json/wp/v2/posts",
 			"repoUrl": "https://github.com/pixelshelsinki",
 			"repoApi": "https://api.github.com/orgs/pixelshelsinki/repos",
+			"referenceUrl": "https://pixels.fi/fi/tyot/",
 			"socialLinks": {
 				"twitter": "https://twitter.com/pixelshelsinki",
 				"instagram": "https://www.instagram.com/pixelshelsinki/",
@@ -73,6 +77,7 @@
 			"postsRestUrl": "https://sivututka.fi/wp-json/wp/v2/posts",
 			"repoUrl": "https://github.com/sivututka",
 			"repoApi": "https://api.github.com/orgs/sivututka/repos",
+			"referenceUrl": "https://sivututka.fi/tyot/",
 			"socialLinks": {
 				"twitter": "https://twitter.com/sivututka",
 				"instagram": "https://www.instagram.com/sivututkaoy/",
@@ -88,6 +93,7 @@
 			"postsRestUrl": "https://morgan.fi/wp-json/wp/v2/posts",
 			"repoUrl": "",
 			"repoApi": "",
+			"referenceUrl": "https://www.morgan.fi/reference/",
 			"socialLinks": {
 				"twitter": "https://twitter.com/morgandigitalfi",
 				"instagram": "https://www.instagram.com/morgandigital/",
@@ -103,6 +109,7 @@
 			"postsRestUrl": "",
 			"repoUrl": "https://github.com/devgeniem",
 			"repoApi": "https://api.github.com/orgs/devgeniem/repos",
+			"referenceUrl": "https://www.geniem.fi/blogi/category/referenssi/",
 			"socialLinks": {
 				"twitter": "https://twitter.com/geniemfi",
 				"instagram": "https://www.instagram.com/geniemdev/",
@@ -119,6 +126,7 @@
 			"postsRestUrl": "",
 			"repoUrl": "https://github.com/evermade",
 			"repoApi": "https://api.github.com/orgs/evermade/repos",
+			"referenceUrl": "https://www.evermade.fi/fi/tyot/",
 			"socialLinks": {
 				"twitter": "https://twitter.com/evermadefi",
 				"instagram": "https://www.instagram.com/evermadehelsinki/",
@@ -134,6 +142,7 @@
 			"postsRestUrl": "https://redland.fi/wp-json/wp/v2/posts",
 			"repoUrl": "",
 			"repoApi": "",
+			"referenceUrl": "https://www.redland.fi/tutustu-toihimme/",
 			"socialLinks": {
 				"twitter": "https://twitter.com/redland_fi",
 				"instagram": "https://www.instagram.com/redland_fi",

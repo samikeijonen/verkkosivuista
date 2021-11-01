@@ -38,5 +38,11 @@ permalink: "{{ blogpost.slug }}/index.html"
 
 		<p class="entry__terms-title fw-500 mb-0 mt-4">Tags:</p>
 		{% include "components/tags.njk" %}
+
+		<div class="has-grey-050-background-color px-wrapper py-8 mt-8">
+			<div class="mx-auto max-width-md flow-spacing">
+				{% include "components/newsletter.njk" %}
+			</div>
+		</div>
 	</div>
 {% endblock %}
