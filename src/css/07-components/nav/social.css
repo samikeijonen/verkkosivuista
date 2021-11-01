@@ -1,13 +1,19 @@
 .nav__items--social {
 	display: flex;
 	flex-wrap: wrap;
-	justify-content: center;
 
 	& > li {
 		margin-bottom: var(--spacing-2x);
-		margin-left: var(--spacing);
-		margin-right: var(--spacing);
+		margin-right: var(--spacing-2x);
 	}
+
+	& > li:last-child {
+		margin-right: 0;
+	}
+}
+
+.nav__items--social-footer {
+	justify-content: center;
 }
 
 .nav__anchor--social {

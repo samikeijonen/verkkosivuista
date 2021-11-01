@@ -20,11 +20,16 @@ permalink: "/digitoimisto/{{ agency.slug }}/index.html"
 		{{ agency.ingress }}
 	</p>
 
+	<p class="has-text-align-center">
+		{% set url = agency.url %}
+		{% set text = title %}
+		{% set extraText = "verkkosivut" %}
+		{% include "components/button.njk" %}
+	</p>
+
 	<figure class="wp-block-image alignwide">
 		{% getScreenshotHtml agency.slug, agency.url, [1400], "screenshot" %}
 	</figure>
-
-	<p><a class="wp-block-button__link" href="{{ agency.url | safe }}">{{ title | safe }} verkkosivut {{ icon.arrowRight | safe }}</a></p>
 
 	{% if agency.typicalBudjet %}
 		<p class="is-style-ingress">
@@ -32,61 +37,98 @@ permalink: "/digitoimisto/{{ agency.slug }}/index.html"
 		</p>
 	{% endif %}
 
-	{% set blogPosts = agencyPosts[agency.slug] %}
-	<h2 class="mt-8">{{ icon.pencil | safe }} Blogi</h2>
-	{%- for post in blogPosts -%}
-		<div class="entry__blog flow-spacing mt-4">
-			<h3 class="entry__title">
-				<a class="entry__title-anchor decoration-none h-decoration-underline color-dark" href="{{ post.link }}">
-					{% if post.title.rendered %}{{ post.title.rendered | safe }}{% else %}{{ post.slug }}{% endif %}
-				</a>
-			</h3>
+	<div class="grid alignwide mx-auto">
+		<div class="section flow-spacing">
+			{% set blogPosts = agencyPosts[agency.slug] %}
+			<h2 class="mt-8">{{ icon.pencil | safe }} Blogi</h2>
+			{%- for post in blogPosts -%}
+				<div class="entry__blog flow-spacing mt-4">
+					<h3 class="entry__title">
+						<a class="entry__title-anchor decoration-none h-decoration-underline color-dark" href="{{ post.link }}">
+							{% if post.title.rendered %}{{ post.title.rendered | safe }}{% else %}{{ post.slug }}{% endif %}
+						</a>
+					</h3>
 
-			<p class="entry__byline fw-500 mt-2 mb-0">
-				{{ icon.calendar | safe }}
-				<time class="entry__date" datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate }}</time>
-			</p>
-		</div>
-	{%- endfor -%}
+					<p class="entry__byline fw-500 mt-2 mb-0">
+						{{ icon.calendar | safe }}
+						<time class="entry__date" datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate }}</time>
+					</p>
+				</div>
+			{%- endfor -%}
 
-	{% if agency.postsUrl %}
-		<p><a class="wp-block-button__link is-style-underlined" href="{{ agency.postsUrl }}">{{ title | safe }} löpinät {{ icon.arrowRight | safe  }}</a></p>
-	{% else %}
-		<p>Hiljaista porukkaa.</p>
-	{% endif %}
-
-	{% set repos = agencyRepos[agency.slug] %}
-	<h2 class="mt-8">{{ icon.github | safe }} Avoin lähdekoodi</h2>
-	{%- for repo in repos -%}
-		<div class="entry__repos flow-spacing mt-4">
-			<h3 class="entry__title">
-				<a class="entry__title-anchor decoration-none h-decoration-underline color-dark" href="{{ repo.html_url }}">
-					{% if repo.description %}{{ repo.description }}{% else %}{{ repo.name }}{% endif %}
-				</a>
-			</h3>
-
-			<p class="entry__byline fw-500 mt-2 mb-0">
-				{{ icon.calendar | safe }}
-				<time class="entry__date" datetime="{{ repo.updated_at | htmlDateString }}">{{ repo.updated_at | readableDate }}</time>
-			</p>
-		</div>
-	{%- endfor -%}
-
-	{% if agency.repoUrl %}
-		<p><a class="wp-block-button__link is-style-underlined" href="{{ agency.repoUrl }}">{{ title | safe }} koodit {{ icon.arrowRight | safe  }}</a></p>
-	{% else %}
-		<p>Github-koodia ei tähän hätään löytynyt.</p>
-	{% endif %}
-
-	<h2>{{ title | safe }} sosiaalisessa mediassa</h2>
-	{% set socialLinks = agency.socialLinks %}
-	<ul class="nav__items nav__items--social reset-list">
-		{%- for name, url in socialLinks -%}
-			{% if url %}
-				<li class="nav__item nav__item--social">
-					<a class="nav__anchor nav__anchor--social" href="{{ url }}">{{ icon[name] | safe }}<span class="screen-reader-text">{{ name }}</span></a>
-				</li>
+			{% if agency.postsUrl %}
+				<p>
+					{% set url = agency.postsUrl %}
+					{% set text = title %}
+					{% set extraText = "löpinät" %}
+					{% set extraClass = "is-style-underlined" %}
+					{% include "components/button.njk" %}
+				</p>
+			{% else %}
+				<p>Hiljaista porukkaa.</p>
 			{% endif %}
-		{%- endfor -%}
-	</ul>
+		</div>
+
+		<div class="section flow-spacing">
+			{% set repos = agencyRepos[agency.slug] %}
+			<h2 class="mt-8">{{ icon.github | safe }} Avoin lähdekoodi</h2>
+			{%- for repo in repos -%}
+				<div class="entry__repos flow-spacing mt-4">
+					<h3 class="entry__title">
+						<a class="entry__title-anchor decoration-none h-decoration-underline color-dark" href="{{ repo.html_url }}">
+							{% if repo.description %}{{ repo.description }}{% else %}{{ repo.name }}{% endif %}
+						</a>
+					</h3>
+
+					<p class="entry__byline fw-500 mt-2 mb-0">
+						{{ icon.calendar | safe }}
+						<time class="entry__date" datetime="{{ repo.updated_at | htmlDateString }}">{{ repo.updated_at | readableDate }}</time>
+					</p>
+				</div>
+			{%- endfor -%}
+
+			{% if agency.repoUrl %}
+				<p>
+					{% set url = agency.repoUrl %}
+					{% set text = title %}
+					{% set extraText = "koodit" %}
+					{% set extraClass = "is-style-underlined" %}
+					{% include "components/button.njk" %}
+				</p>
+			{% else %}
+				<p>Github-koodia ei tähän hätään löytynyt.</p>
+			{% endif %}
+		</div>
+	</div>
+
+	<div class="grid alignwide mx-auto mt-8">
+		<div class="section flow-spacing">
+			{% if agency.referenceUrl %}
+				<h2>{{ icon.quote | safe }} Referenssejä</h2>
+				<p>
+					{% set url = agency.referenceUrl %}
+					{% set text = title %}
+					{% set extraText = "työnäytteet" %}
+					{% set extraClass = "is-style-underlined" %}
+					{% include "components/button.njk" %}
+				</p>
+			{% else %}
+				<p>Noni. Referenssejä ei löytynyt.</p>
+			{% endif %}
+		</div>
+
+		<div class="section flow-spacing">
+			<h2>{{ icon.share | safe }} {{ title | safe }} sosiaalisessa mediassa</h2>
+			{% set socialLinks = agency.socialLinks %}
+			<ul class="nav__items nav__items--social reset-list">
+				{%- for name, url in socialLinks -%}
+					{% if url %}
+						<li class="nav__item nav__item--social">
+							<a class="nav__anchor nav__anchor--social" href="{{ url }}">{{ icon[name] | safe }}<span class="screen-reader-text">{{ name }}</span></a>
+						</li>
+					{% endif %}
+				{%- endfor -%}
+			</ul>
+		</div>
+	</div>
 {% endblock %}
